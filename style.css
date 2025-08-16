@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e40af 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-gradient {
+  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15);
+}
+
+.skill-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #1e3a8a 0%, #3730a3 100%);
+  border-radius: 4px;
+  transition: width 2s ease-in-out;
+}
+
+.typing-animation {
+  border-right: 2px solid #1e3a8a;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    border-color: #1e3a8a;
+  }
+  51%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #1e3a8a 0%, #3730a3 100%);
+  transition: left 0.3s ease;
+}
+
+.nav-link:hover::after {
+  left: 0;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 58, 138, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.circuit-pattern {
+  background-image: linear-gradient(
+      90deg,
+      rgba(30, 58, 138, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(rgba(30, 58, 138, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(30, 58, 138, 0.4);
+  border-radius: 50%;
+  animation: float 8s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(30, 58, 138, 0.2);
+  z-index: 1000;
+}
+
+.scroll-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #1e3a8a 0%, #3730a3 100%);
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  background: rgb(255, 255, 255);
+  border: 2px solid #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.qr-pattern {
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+      0deg,
+      #000 0px,
+      #000 10px,
+      #fff 10px,
+      #fff 20px
+    ),
+    repeating-linear-gradient(90deg, #000 0px, #000 10px, #fff 10px, #fff 20px);
+  opacity: 0.8;
+}
+
+.tech-icon {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
